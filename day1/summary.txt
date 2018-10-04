@@ -1,0 +1,59 @@
+# Deep Learning Part1, chapter 1 (Chollet)
+
+Trong những năm gần đây,trí tuệ nhân tạo (AI) đã trở thành 1 trong những chủ đề tâm điểm để cả thế giới bàn tán.Số lượng bài viết về khả năng,độ khả thi và những dự án về AI mọc lên không xuể.Cùng với đó là sự chạy đua vũ trang của các tập đoàn lớn trên thế giới như Google,Facebook,...đã biến AI thành 1 trong những mảng hot nhất.Những dự án được đầu tư như : xe tự vận hành,nhận diện khuôn mặt,xử lý ngôn ngữ tự nhiên,chatbot,...đã tiêu tốn hàng chục hàng trăm triệu đô.Vậy AI là gì??Chúng ta có thực sự cần AI?Deep Learning có thực sự hot?
+
+1.AI là gì?
+-AI bắt đầu vào tầm năm 1950 với ý tưởng đơn giản ban đầu là cho máy có thể "nghĩ" - thực hiện nhưng basic task thường mà con người làm.
+-Có thể nói AI bao gồm cả Machine Learning(ML) và Deep Learning(DL) và thậm chí cả những cách tiếp cận ko cần học.Ex : con máy chơi cờ đầu tiên sử dụng vét cạn,...
+
+1.2 ML
+-Ngta nhận ra với những thụât toán cơ bản ko cần học thì sẽ khó để xử lý các bài toán như nhận diện ảnh,nhận diện giọng nói,phân loại,...vì vậy thay vì mô hình ban đầu là đưa ra đầu vào input qua 1 hàm xử lý f(x) để ra được output thì cách tiếp cận của ML là đưa vào đầu vào input và cho biết đầu ra output (bộ train) , máy tính sẽ train và tự học ra hàm xử lý f(x).Qua đó ta có thể thấy ML sẽ được học thay vì bằng cách lập trình một cách rõ ràng.
+-Đánh giá mô hình ML dựa trên sự chính xác giữa dữ liệu input và đầu ra output,ví dụ đầu ra của model sau khi cho input x vào là f(x) và output thực tế là g(x) , máy tính sẽ phải tìm ra một cách biểu diễn data tốt nhất để có thể đưa ra g(x)-f(x) (1) (ở đây ý là độ lệch) ở giá trị bé nhất,càng bé càng tốt.
+
+1.3 DL
+1.3.1 DL
+-Là 1 mảng con của ML.
+-Thực ra về cách tiếp cận vấn đề thì DL về cơ bản là giống ML nhưng nó dựa trên những lớp(layer) liên tiếp nhau để thể hiện data 1 cách tốt hơn.Do đó DL có thể gọi là mô hình biểu diễn thứ bậc hay là mô hình biểu diễn lớp liên tiếp.Trong khi ML thường chú ý đến 1 cách thể hiện data thì DL gồm nhiều cách thể hiện.
+-Ví dụ : (cóp ảnh và ví dụ vào)
+-Trong các lớp có các tham số học (weights) và nhiệm vụ của DL là tìm ra những weights phù hợp cho bài toán.Và cũng  tương tự là sẽ có hàm loss function ( hàm tính sự chênh lệch giữa g(x)-f(x) ở (1) sau đó sử dụng giá trị này để thông báo cho model cần update lại các weights gọi là optimizer(tối ưu) bằng thuật toán backpropagation.
+-VD (cóp ảnh và ví dụ vào)
+1.3.2 Một số thành tựu của DL:
+-Phân biệt ảnh gần như mắt người
+-Tiệm cận khả năng nghe ngôn ngữ
+- Có thể phân biệt rõ được chữ viết tay
+- Dịch máy tốt hơn
+-....
+2. 1 số thuật toán về ML,DL
+2.1 ML
+-Naive Bayes
+-Logistic Regression
+-Linear Regression
+-SVM ( kernel method )
+-Decision trees
+-Gradient Boost Machine
+-Random Forests
+2.2 DL
+-Với việc tăng số layer lên thì ban đầu không khả thi nên mạng neuron ban đầu chỉ 1,2 lớp và nó không thể hiện sự khác biệt với những thuật toán ML đã biết tuy nhiên DL có rất nhiều cách tuning ở giai đoạn backpropagation.Và với sự phát triển của phần cứng,số lượng data và thuật toán đã có thể tăng số lớp layer lên hàng trăm hàng nghìn và nó thực sự là 1 sự đột phá.
+Ví dụ : Khoảng năm 2010, mặc dù các mạng thần kinh gần như hoàn toàn bị xa lánh bởi khoa học
+cộng đồng nói chung, một số người vẫn làm việc trên các mạng thần kinh
+bắt đầu có những đột phá quan trọng: các nhóm Geoffrey Hinton tại trường đại học
+của Toronto, Yoshua Bengio tại Đại học Montreal, Yann LeCun tại New
+Đại học York và IDSIA ở Thụy Sĩ.
+ Năm 2011, Dan Ciresan từ IDSIA bắt đầu giành chiến thắng trong các cuộc thi phân loại hình ảnh học thuật
+với mạng nơron sâu được đào tạo bởi GPU — thành công thực tế đầu tiên của hiện đại
+học kĩ càng. Nhưng thời điểm đầu nguồn đến vào năm 2012, với sự tham gia của
+Nhóm của Hinton trong thách thức phân loại hình ảnh quy mô lớn hàng năm ImageNet. Các
+Thử thách ImageNet nổi tiếng là khó khăn vào thời điểm đó, bao gồm phân loại highresolution
+hình ảnh màu thành 1.000 loại khác nhau sau khi đào tạo trên 1,4 triệu
+hình ảnh. Năm 2011, tính chính xác hàng đầu của mô hình chiến thắng, dựa trên cổ điển
+tiếp cận thị giác máy tính, chỉ 74,3%. Sau đó, vào năm 2012, một nhóm do Alex dẫn dắt
+Krizhevsky và cố vấn của Geoffrey Hinton đã có thể đạt được độ chính xác hàng đầu của năm
+83,6% —một bước đột phá đáng kể. Cuộc thi đã bị chi phối bởi sâu
+mạng thần kinh chập mạch mỗi năm kể từ đó. Đến năm 2015, người chiến thắng đạt được độ chính xác
+96,4% và nhiệm vụ phân loại trên ImageNet được coi như là đã được giải quyết.
+Và ở trên 1 trang Kaggle( trang web tổ chức nhiều events về AI và dataset ) thì năm 2016,2017 những kết quả tốt nhất thường đến từ machine gradient boosting và Deep Learning.
+3.Phần Kết
+-Với sự phát triển về phần cứng,thuật toán và dữ liệu thì DL là một trong những tiềm năng rất lớn,tuy vậy cần thực tế trong cách nhìn nhận vì sự thổi phồng của Internet đang khiến kì vọng về AI quá lớn.
+-DL có cấu trúc,cơ chế đơn giản,có tính linh hoạt cao,có thể tái sử dụng.
+-Đưa ra những lời giải đáp về nhiều vấn đề về giác quan,nhìn nhận của con người.
+-AI chắc chắn là tương lai và DL cũng không nằm ngoài đó.
